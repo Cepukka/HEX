@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scene/Circle.gd" type="Script" id=1]
+
+[node name="Root" type="Node2D" index="0"]
+
+[node name="Circle" type="Node2D" parent="." index="0"]
+
+position = Vector2( 400, 300 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+radius = 150
+color = Color( 1, 1, 1, 1 )
+
+
