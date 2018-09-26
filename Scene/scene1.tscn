@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scene/GUI/gui-scene2.tscn" type="PackedScene" id=1]
+
+[node name="Root" type="Node" index="0"]
+
+[node name="GuiRoot" parent="." index="0" instance=ExtResource( 1 )]
+
+
