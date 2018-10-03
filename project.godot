@@ -14,13 +14,17 @@ config/name="HEX"
 run/main_scene="res://Scene/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SceneSwitcher="*res://Scene/SceneSwitcher.tscn"
+
 [display]
 
 window/size/width=854
 window/size/height=480
 window/size/resizable=false
-window/size/borderless=true
-window/size/fullscreen=true
+window/size/borderless=false
+window/size/fullscreen=false
 window/size/test_width=1920
 window/size/test_height=1080
 window/dpi/allow_hidpi=true
