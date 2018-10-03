@@ -2,7 +2,7 @@ extends Node2D
 
 const SIDE_LEN_PX = 2
 
-var radius = 1
+var radius = 10
 export var color = Color(1, 1, 1) setget color_change
 var vertices = PoolVector2Array()
 var empty = PoolVector2Array()
@@ -29,3 +29,7 @@ func _draw():
 func color_change(value):
 	color = value
 	update()
+
+func _on_Button_mouse_entered():
+	$Tween.interpolate_property(self, "transform/scale", Vector2(1, 1), Vector2(1.2, 1.2), 0.1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	$Tween.start()
