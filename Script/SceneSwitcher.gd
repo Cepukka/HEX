@@ -6,7 +6,7 @@ var current_path_to = null
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
-	$AnimationPlayer.play("IDLE")
+	$AnimationPlayer.play("Idle")
 
 func goto_scene(path):
 	current_path_to = path
