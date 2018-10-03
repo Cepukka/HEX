@@ -2,13 +2,15 @@
 
 [ext_resource path="res://Scene/Circle.gd" type="Script" id=1]
 
-[node name="Root" type="Node2D"]
+[node name="Root" type="Node2D" index="0"]
+
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Circle" type="Node2D" parent="." index="0"]
 
-position = Vector2( 400, 300 )
+position = Vector2( 510.021, 205.257 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
-color = Color( 1, 1, 1, 1 )
+color = Color( 0, 0.53125, 0.437867, 1 )
 
 
