@@ -16,14 +16,14 @@ func _ready():
 
 func circle_radius():
 	var dy = SIDE_LEN_PX / 2
-	var dx = sqrt(radius * radius - dy * dy)
+	var dx = sqrt(1 * 1 - dy * dy)
 	var angle_delta = atan2(dx, dy)
 	var angle = 0
 	angle_delta = 2 * PI / (3 * 360)
 	
 	while angle < 2 * PI:
-		var x = cos(angle) * radius
-		var y = sin(angle) * radius
+		var x = cos(angle)
+		var y = sin(angle)
 		vertices.append(Vector2(x, y))
 		angle += angle_delta
 
