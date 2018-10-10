@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Scene/scene1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Shape/circle.tscn" type="PackedScene" id=2]
-
 [node name="Root" type="Node" index="0"]
 
 script = ExtResource( 1 )
