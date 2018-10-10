@@ -14,4 +14,4 @@ func _ready():
 
 
 func _on_Button_pressed():
-	SceneSwitcher.goto_scene("res://Scene/GUI/guiScene2.tscn")
+	sceneSwitcher.goto_scene("res://Scene/GUI/guiScene2.tscn")
