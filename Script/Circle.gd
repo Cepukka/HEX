@@ -3,12 +3,16 @@ extends Node2D
 const SIDE_LEN_PX = 2
 
 var radius = 10
+var current_scale = Vector2()
+export var scale_multiplier = Vector2(1,1) setget multiscale
 export var color = Color(1, 1, 1) setget color_change
 var vertices = PoolVector2Array()
 var empty = PoolVector2Array()
 
 func _ready():
+	$Animation.play("idle")
 	circle_radius()
+	current_scale = scale
 
 func circle_radius():
 	var dy = SIDE_LEN_PX / 2
@@ -30,6 +34,10 @@ func color_change(value):
 	color = value
 	update()
 
-func _on_Button_mouse_entered():
-	$Tween.interpolate_property(self, "transform/scale", Vector2(1, 1), Vector2(1.2, 1.2), 0.1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
-	$Tween.start()
+func multiscale(value):
+	scale_multiplier = value
+	scale = current_scale*scale_multiplier
+
+
+func _on_Button_pressed():
+	$Animation.play("pressed")
