@@ -11,12 +11,13 @@ config_version=3
 [application]
 
 config/name="HEX"
-run/main_scene="res://Scene/Main.tscn"
+run/main_scene="res://Scene/Game/scene1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 sceneSwitcher="*res://Scene/sceneSwitcher.tscn"
+environment="*res://Script/environment.gd"
 
 [display]
 

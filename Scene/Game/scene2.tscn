@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Script/scene1.gd" type="Script" id=1]
-[ext_resource path="res://Scene/Shape/circle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Script/scene2.gd" type="Script" id=1]
+[ext_resource path="res://Scene/GUI/guiScene2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Shape/circle.tscn" type="PackedScene" id=3]
 
-[node name="Root" type="Node" index="0"]
+[node name="Root" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -23,13 +24,16 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.196078, 0.196078, 0.196078, 1 )
+color = Color( 0.941176, 0.941176, 0.941176, 1 )
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="Circle" parent="." index="1" instance=ExtResource( 2 )]
+[node name="GuiRoot" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="Circle" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 427, 240 )
 scale = Vector2( 30, 30 )
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
 
 [node name="Button" type="Button" parent="Circle" index="0"]
 
@@ -68,6 +72,6 @@ playback/speed = 1.0
 
 [connection signal="mouse_entered" from="Circle/Button" to="Circle" method="_on_Button_mouse_entered"]
 
-[connection signal="pressed" from="Circle/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Circle/Button" to="." method="switch_scene"]
 
 
