@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Script/scene1.gd" type="Script" id=1]
+[ext_resource path="res://Script/Game/scene1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Shape/circle.tscn" type="PackedScene" id=2]
 
 [node name="Root" type="Node"]
