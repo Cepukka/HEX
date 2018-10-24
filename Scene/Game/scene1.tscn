@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Script/Game/scene1.gd" type="Script" id=1]
+[ext_resource path="res://Script/scene1.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Shape/circle.tscn" type="PackedScene" id=2]
 
-[node name="Root" type="Node"]
+[node name="Root" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -71,5 +71,7 @@ playback/speed = 1.0
 [connection signal="pressed" from="Circle/Button" to="." method="_on_Button_pressed"]
 
 [connection signal="pressed" from="Circle/Button" to="." method="switch_scene"]
+
+[connection signal="pressed" from="Circle/Button" to="." method="_on_Button_pressed"]
 
 
